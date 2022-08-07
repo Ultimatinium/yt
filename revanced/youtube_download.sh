@@ -4,7 +4,7 @@ echo "Declaring variables"
 declare -A apks
 
 apks["com.google.android.youtube.apk"]="https://youtube.en.uptodown.com/android/apps/16906/versions"
-apks["com.google.android.apps.youtube.music.apk"]="https://youtube-music.en.uptodown.com/android/apps/146929/versions"
+apks["com.google.android.apps.youtube.music.apk"]="https://youtube-music.en.upto(Erase this to enable music))down.com/android/apps/146929/versions"
 
 get_apk_download_url()
 {
