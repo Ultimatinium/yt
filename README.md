@@ -12,8 +12,6 @@ This repository will allow you to download ReVanced in the releases section. Thi
 - All the patches here are the default and official patches by ReVanced.
 
 - There are no Revanced YouTube Music in the releases section, it won't work as current patches doesn't include the YouTube Music Non-root (Micro G) patch track this ([pull request](https://github.com/revanced/revanced-patches/pull/22) when it will get merged to ReVanced `main` branch and released). Don't open an issue here. Just rebuild ReVanced when music microG patch is available on [ReVanced Patches](https://github.com/revanced/revanced-patches/releases).
-### Build status
-[![All ReVanced Builds](https://github.com/ultimatinium/yt/actions/workflows/Build-All.yml/badge.svg)](https://github.com/ultimatinium/yt/actions/workflows/Build-All.yml)
 
 ### Credits
 - [Revanced build template](https://github.com/n0k0m3/revanced-build-template) by [n0k0m3](https://github.com/n0k0m3).
