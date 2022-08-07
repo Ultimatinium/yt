@@ -21,5 +21,7 @@ This repository will allow you to download ReVanced in the releases section. Thi
 
 # Where to download?
 - First, click [here](https://github.com/Ultimatinium/yt/releases).
+
 - Click the `Assets` button.
+
 - Click on the file to download.
