@@ -1,0 +1,46 @@
+name: Build Revanced Reddit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+
+    - name: Setup Java
+      uses: actions/setup-java@v3.3.0
+      with:
+        distribution: "zulu"
+        java-version: "17"
+        java-package: jdk
+
+    - name: Download base packages
+      run: |
+        cd rereddit
+        python reddit_download.py
+
+    - name: Compile ReReddit
+      run: |
+        cd rereddit
+        chmod +x compile_rereddit.sh
+        ./compile_rereddit.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign packages
+      run: |
+        chmod +x revanced/sign_packages.sh
+        ./revanced/sign_packages.sh
+
+    - name: Upload packages
+      uses: marvinpinto/action-automatic-releases@v1.2.1
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        draft: true
+        title: "r${{ env.date_now }}"
+        files: |
+          rereddit/output/release/*.apk
