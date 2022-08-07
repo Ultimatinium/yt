@@ -1,4 +1,4 @@
-name: Build-All
+name: Build Base Release
 
 on:
   workflow_dispatch:
@@ -23,37 +23,16 @@ jobs:
         cd rereddit
         python reddit_download.py
 
-    - name: Compile ReReddit
-      run: |
-        cd rereddit
-        chmod +x compile_rereddit.sh
-        ./compile_rereddit.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
     - name: Download base packages
       run: |
         cd retwitter
         python twitter_download.py
-
-    - name: Compile ReTwitter
-      run: |
-        cd retwitter
-        chmod +x compile_retwitter.sh
-        ./compile_retwitter.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Download base packages
       run: |
         cd revanced
         chmod +x youtube_download.sh
         ./youtube_download.sh
-
-    - name: Compile ReVanced
-      run: |
-        cd revanced
-        chmod +x compile_revanced.sh
-        ./compile_revanced.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Sign packages
       run: |
@@ -64,9 +43,9 @@ jobs:
       uses: marvinpinto/action-automatic-releases@v1.2.1
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
+        automatic_release_tag: "base"
         draft: true
-        title: "r${{ env.date_now }}"
+        title: "base"
         files: |
           revanced/vanced-microg.apk
           revanced/output/release/*.apk
