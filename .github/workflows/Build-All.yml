@@ -35,16 +35,6 @@ jobs:
         chmod +x revanced/sign_packages.sh
         ./revanced/sign_packages.sh
 
-    - name: Upload packages
-      uses: marvinpinto/action-automatic-releases@v1.2.1
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        draft: true
-        title: "r${{ env.date_now }}"
-        files: |
-          rereddit/output/release/*.apk
-
     - name: Download base packages
       run: |
         cd retwitter
@@ -61,16 +51,6 @@ jobs:
       run: |
         chmod +x revanced/sign_packages.sh
         ./revanced/sign_packages.sh
-
-    - name: Upload packages
-      uses: marvinpinto/action-automatic-releases@v1.2.1
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        draft: true
-        title: "r${{ env.date_now }}"
-        files: |
-          retwitter/output/release/*.apk
 
     - name: Download base packages
       run: |
@@ -100,3 +80,5 @@ jobs:
         files: |
           revanced/vanced-microg.apk
           revanced/output/release/*.apk
+          retwitter/output/release/*.apk
+          rereddit/output/release/*.apk
