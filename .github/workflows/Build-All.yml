@@ -80,5 +80,5 @@ jobs:
         files: |
           revanced/vanced-microg.apk
           revanced/output/release/*.apk
-          retwitter/output/release/*.apk
-          rereddit/output/release/*.apk
+          retwitter/output/release/com.twitter.android.apk
+          rereddit/output/release/com.reddit.frontpage.apk
