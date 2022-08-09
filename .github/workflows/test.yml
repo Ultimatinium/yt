@@ -1,48 +1,33 @@
 name: test
 
 on:
-  workflow_dispatch:
-
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
+      - uses: actions/checkout@v3
 
-    - name: Setup Java
-      uses: actions/setup-java@v3.3.0
-      with:
-        distribution: "zulu"
-        java-version: "17"
-        java-package: jdk
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: "18"
+          distribution: "adopt"
 
-    - name: Download base packages
-      run: |
-        cd test
-        chmod +x download.sh
-        ./download.sh
-
-    - name: Compile YouTube
-      run: |
-        cd test
-        chmod +x compile.sh
-        ./compile.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-    - name: Sign packages
-      run: |
-        chmod +x revanced/sign_packages.sh
-        ./revanced/sign_packages.sh
-
-    - name: Upload packages
-      uses: marvinpinto/action-automatic-releases@v1.2.1
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "${{ env.date_now }}"
-        draft: true
-        title: "${{ env.date_now }} - ReVanced YouTube"
-        files: |
-          test/vanced-microg.apk
-          test/output/release/*.apk
+      - name: Test Build APKs
+        run: |
+          ./test/compile.sh
+          for filename in build/revanced-nonroot.apk; do
+            if [ -e "$filename" ]; then
+              printf '"%s" exists\n' "$filename"
+            else
+              echo "APK build failed"
+              exit 1
+            fi
+          done
+          rm -rf build
+          
