@@ -39,11 +39,8 @@ jobs:
       uses: marvinpinto/action-automatic-releases@v1.2.1
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
+        automatic_release_tag: "${{ env.date_now }}"
         draft: true
-        title: "r${{ env.date_now }}"
+        title: "${{ env.date_now }} - ReVanced Reddit"
         files: |
-          revanced/vanced-microg.apk
-          revanced/output/release/*.apk
-          retwitter/output/release/*.apk
           rereddit/output/release/*.apk
