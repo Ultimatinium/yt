@@ -1,0 +1,102 @@
+name: Build All
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+
+    - name: Setup Java
+      uses: actions/setup-java@v3.3.0
+      with:
+        distribution: "zulu"
+        java-version: "17"
+        java-package: jdk
+
+    - name: Download base packages
+      run: |
+        cd rereddit
+        python reddit_download.py
+
+    - name: Compile ReReddit
+      run: |
+        cd rereddit
+        chmod +x compile_rereddit.sh
+        ./compile_rereddit.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign packages
+      run: |
+        chmod +x revanced/sign_packages.sh
+        ./revanced/sign_packages.sh
+
+    - name: Download base packages
+      run: |
+        cd retwitter
+        python twitter_download.py
+
+    - name: Compile ReTwitter
+      run: |
+        cd retwitter
+        chmod +x compile_retwitter.sh
+        ./compile_retwitter.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign packages
+      run: |
+        chmod +x revanced/sign_packages.sh
+        ./revanced/sign_packages.sh
+
+    - name: Download base packages
+      run: |
+        cd warnwetter
+        python ww_download.py
+
+    - name: Compile WarnWetter
+      run: |
+        cd warnwetter
+        chmod +x ww_compile.sh
+        ./ww_compile.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign packages
+      run: |
+        chmod +x revanced/sign_packages.sh
+        ./revanced/sign_packages.sh
+
+    - name: Download base packages
+      run: |
+        cd revanced
+        chmod +x youtube_download.sh
+        ./youtube_download.sh
+
+    - name: Compile YouTube
+      run: |
+        cd revanced
+        chmod +x compile_revanced.sh
+        ./compile_revanced.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign packages
+      run: |
+        chmod +x revanced/sign_packages.sh
+        ./revanced/sign_packages.sh
+
+    - name: Upload packages
+      uses: marvinpinto/action-automatic-releases@v1.2.1
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "${{ env.date_now }}"
+        draft: true
+        title: "${{ env.date_now }} - ReVanced"
+        files: |
+          revanced/vanced-microg.apk
+          revanced/output/release/*.apk
+          rereddit/output/release/*.apk
+          retwitter/output/release/*.apk
+          warnwetter/output/release/*.apk
