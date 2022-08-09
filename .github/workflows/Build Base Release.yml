@@ -1,4 +1,4 @@
-name: Build Base Release
+name: Build Reddit
 
 on:
   workflow_dispatch:
@@ -22,24 +22,16 @@ jobs:
       run: |
         cd rereddit
         python reddit_download.py
+
+    - name: Compile ReReddit
+      run: |
+        cd rereddit
         chmod +x compile_rereddit.sh
         ./compile_rereddit.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-        cd retwitter
-        python twitter_download.py
-        chmod +x compile_retwitter.sh
-        ./compile_retwitter.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-        cd revanced
-        chmod +x youtube_download.sh
-        ./youtube_download.sh
-
-        chmod +x compile_revanced.sh
-        ./compile_revanced.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
+    - name: Sign packages
+      run: |
         chmod +x revanced/sign_packages.sh
         ./revanced/sign_packages.sh
 
