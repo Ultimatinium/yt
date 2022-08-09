@@ -6,7 +6,6 @@ This repository will allow you to download ReVanced in the releases section. Thi
 - YouTube
 - YouTube Music
 - Reddit
-- WarnWetter
 
 ### Notes
 - There are no `root` variant here, all the releases are `nonroot` variants.
