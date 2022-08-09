@@ -16,10 +16,9 @@ jobs:
           java-version: "18"
           distribution: "adopt"
 
-    - name: Build apk
-      run: |
-        chmod +x test/compile.sh
-        ./test/compile.sh
+      - name: Test Build APKs
+        run: |
+          ./1.sh
           for filename in build/revanced-nonroot.apk; do
             if [ -e "$filename" ]; then
               printf '"%s" exists\n' "$filename"
@@ -29,4 +28,3 @@ jobs:
             fi
           done
           rm -rf build
-          
