@@ -1,4 +1,4 @@
-# INCLUDED PATCHES
+# EXCLUDE PATCHES FROM BELOW. DO NOT REMOVE THIS LINE
 seekbar-tapping
 minimized-playback
 return-youtube-dislike
@@ -20,7 +20,7 @@ codecs-unlock
 exclusive-audio-playback
 amoled
 compact-header
-# EXCLUDED PATCHES
+# INCLUDE PATCHES FROM BELOW. DO NOT REMOVE THIS LINE
 swipe-controls
 disable-create-button
 hide-cast-button
