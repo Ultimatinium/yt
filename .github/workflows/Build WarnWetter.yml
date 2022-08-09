@@ -23,7 +23,7 @@ jobs:
         cd warnwetter
         python ww_download.py
 
-    - name: Compile ReReddit
+    - name: Compile WarnWetter
       run: |
         cd warnwetter
         chmod +x ww_compile.sh
