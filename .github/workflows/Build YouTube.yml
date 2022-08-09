@@ -24,7 +24,7 @@ jobs:
         chmod +x youtube_download.sh
         ./youtube_download.sh
 
-    - name: Compile ReVanced
+    - name: Compile YouTube
       run: |
         cd revanced
         chmod +x compile_revanced.sh
