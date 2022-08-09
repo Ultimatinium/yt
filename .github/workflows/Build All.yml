@@ -54,23 +54,6 @@ jobs:
 
     - name: Download base packages
       run: |
-        cd warnwetter
-        python ww_download.py
-
-    - name: Compile WarnWetter
-      run: |
-        cd warnwetter
-        chmod +x ww_compile.sh
-        ./ww_compile.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-    - name: Sign packages
-      run: |
-        chmod +x revanced/sign_packages.sh
-        ./revanced/sign_packages.sh
-
-    - name: Download base packages
-      run: |
         cd revanced
         chmod +x youtube_download.sh
         ./youtube_download.sh
@@ -99,4 +82,3 @@ jobs:
           revanced/output/release/*.apk
           rereddit/output/release/*.apk
           retwitter/output/release/*.apk
-          warnwetter/output/release/*.apk
