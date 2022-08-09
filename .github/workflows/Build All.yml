@@ -93,7 +93,7 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "${{ env.date_now }}"
         draft: true
-        title: "${{ env.date_now }} - ReVanced"
+        title: "${{ env.date_now }} - ReVanced Latest"
         files: |
           revanced/vanced-microg.apk
           revanced/output/release/*.apk
