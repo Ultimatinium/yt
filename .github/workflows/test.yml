@@ -1,4 +1,4 @@
-name: Build YouTube
+name: Test
 
 on:
   workflow_dispatch:
