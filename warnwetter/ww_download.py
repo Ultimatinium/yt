@@ -10,4 +10,4 @@ def download_apk(url, filename):
     subprocess.run(["wget", dl_url, "-O", filename])
 
 print("Downloading WarnWetter")
-download_apk(WW_URL, "de.dwd.warnapp")
+download_apk(WW_URL, "de.dwd.warnapp.apk")
