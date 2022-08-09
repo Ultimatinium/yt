@@ -22,20 +22,11 @@ jobs:
       run: |
         cd rereddit
         python reddit_download.py
-
-    - name: Download base packages
-      run: |
         cd retwitter
         python twitter_download.py
-
-    - name: Download base packages
-      run: |
         cd revanced
         chmod +x youtube_download.sh
         ./youtube_download.sh
-
-    - name: Sign packages
-      run: |
         chmod +x revanced/sign_packages.sh
         ./revanced/sign_packages.sh
 
@@ -44,7 +35,7 @@ jobs:
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "base"
-        draft: true
+        draft: false
         title: "base"
         files: |
           revanced/vanced-microg.apk
