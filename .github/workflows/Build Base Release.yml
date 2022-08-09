@@ -22,11 +22,24 @@ jobs:
       run: |
         cd rereddit
         python reddit_download.py
+        chmod +x compile_rereddit.sh
+        ./compile_rereddit.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
         cd retwitter
         python twitter_download.py
+        chmod +x compile_retwitter.sh
+        ./compile_retwitter.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
         cd revanced
         chmod +x youtube_download.sh
         ./youtube_download.sh
+
+        chmod +x compile_revanced.sh
+        ./compile_revanced.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
         chmod +x revanced/sign_packages.sh
         ./revanced/sign_packages.sh
 
@@ -35,7 +48,7 @@ jobs:
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "base"
-        draft: false
+        draft: true
         title: "base"
         files: |
           revanced/vanced-microg.apk
