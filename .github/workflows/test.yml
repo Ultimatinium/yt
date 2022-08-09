@@ -16,10 +16,9 @@ jobs:
           java-version: "18"
           distribution: "adopt"
 
-      - name: Test Build APKs
-        run: |
-        cd test
-          chmod +x test/compile.sh
+    - name: Build apk
+      run: |
+        chmod +x test/compile.sh
         ./test/compile.sh
           for filename in build/revanced-nonroot.apk; do
             if [ -e "$filename" ]; then
