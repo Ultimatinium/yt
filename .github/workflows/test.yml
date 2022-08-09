@@ -18,7 +18,7 @@ jobs:
 
       - name: Test Build APKs
         run: |
-          ./1.sh
+          ./0.sh
           for filename in build/revanced-nonroot.apk; do
             if [ -e "$filename" ]; then
               printf '"%s" exists\n' "$filename"
