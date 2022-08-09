@@ -1,8 +1,0 @@
-*.apk
-*.jar
-*.dex
-revanced-cache/
-build/
-.editorconfig
-0.txt
-.vscode/
