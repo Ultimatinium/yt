@@ -47,9 +47,9 @@ jobs:
       uses: marvinpinto/action-automatic-releases@v1.2.1
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "base"
+        automatic_release_tag: "latest"
         draft: true
-        title: "base"
+        title: "r${{ env.date_now }}"
         files: |
           revanced/vanced-microg.apk
           revanced/output/release/*.apk
