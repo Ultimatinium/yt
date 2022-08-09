@@ -11,11 +11,12 @@ This repository will allow you to download ReVanced in the releases section. Thi
 ### Notes
 - There are no `root` variant here, all the releases are `nonroot` variants.
 
-- All the patches here are the default and official patches by ReVanced.
+- All the patches here are the default and [Official Patches](https://bit.ly/3dhEGVT) by [ReVanced](https://bit.ly/3bFTMnP).
 
 - All the app here are latest compatible versions from [UpToDown](https://en.upyodown.com) website (see the compatible versions [here](https://bit.ly/3dhXVik)) so there is no guarantee that the applications here are the latest update like on Google Play Store.
 
 ### Credits
+- [ReVanced](https://bit.ly/3bFTMnP) for all the patch.
 - Credits for the [ReVanced build template](https://github.com/n0k0m3/revanced-build-template) by [n0k0m3](https://github.com/n0k0m3).
 - Thanks for the original codes here from [build-revanced](https://github.com/vietanhbui2000/build-revanced) repository by [vietanhbui2000](https://github.com/vietanhbui2000).
 - Thanks to [Stonks](https://phcorner.net/members/stonks.1530736) from [PH Corner](https://phcorner.net) for this effortless repository.
