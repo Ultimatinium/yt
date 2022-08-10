@@ -1,4 +1,4 @@
-### List of compatible applications from [APK Mirror](https://www.apkmirror.com) for ReVanced Patches.
+### List of compatible applications from [APK Mirror](https://www.apkmirror.com) for [ReVanced Patches](https://github.com/revanced/revanced-patches).
 YouTube Music : [Latest](https://www.apkmirror.com/apk/google-inc/youtube-music)
 
 YouTube App : [Latest](https://www.apkmirror.com/apk/google-inc/youtube)
