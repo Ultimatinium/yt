@@ -8,6 +8,7 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 - YouTube Music
 - Reddit
 - Twitter
+- Micro G
 
 ### Notes
 - There are no `root` variant here, all the releases are `nonroot` variants.
