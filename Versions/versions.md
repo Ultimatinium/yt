@@ -1,8 +1,8 @@
-### List of compatible applications from [APK Mirror](https://www.apkmirror.com) for [ReVanced Patches](https://github.com/revanced/revanced-patches).
-YouTube Music : [5.17.51](https://www.apkmirror.com/apk/google-inc/youtube-music)
+### List of compatible applications from [APK Mirror](https://www.apkmirror.com) and [UpToDown](https://en.uptodown.com) for [ReVanced Patches](https://github.com/revanced/revanced-patches).
+APK Mirror YouTube Music : [5.17.51](https://www.apkmirror.com/apk/google-inc/youtube-music)
 
-YouTube App : [17.29.34](https://www.apkmirror.com/apk/google-inc/youtube)
+APK Mirror YouTube App : [17.29.34](https://www.apkmirror.com/apk/google-inc/youtube)
 
-Reddit App : [Latest](https://www.apkmirror.com/apk/redditinc/reddit)
+UpToDown Reddit App : [2022.30.0](https://reddit-official-app.en.uptodown.com)
 
-Twitter App : [Latest](https://www.apkmirror.com/apk/twitter-inc/twitter)
+UpToDown Twitter App : [9.54.0-Release.0](https://twitter.en.uptodown.com)
