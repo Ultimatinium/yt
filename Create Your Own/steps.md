@@ -4,6 +4,8 @@ If you want to create your own release, there are only few steps to do it.
 
 Step 1:
 Fork this repository.
+- [How to fork a repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo)?
+- To fork a repository on mobile browser, you can't see fork button on mobile view, you have to change to desktop mode first ([see how](https://youtu.be/0Dtd7-Swa8c)) then click the fork button.
 
 Step 2:
 After you forked this repository, go to GitHub Actions.
