@@ -1,3 +1,5 @@
+## Read Carefully..!
+
 ## ReVanced Download
 This repository will allow you to download the latest [ReVanced Applications](https://github.com/Ultimatinium/yt/blob/main/Versions/versions.md) in the releases section. This will help people who don't want to setup build environments on their machines.
 
@@ -34,7 +36,11 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 
 - Click on the file to download.
 
+- I will try to update everyday, so stay tuned.
+
 - For the Beta/Experimental YouTube and YouTube Music, click [here](https://github.com/Ultimatinium/yt-experimental/releases).
 
 ### You want to create your own?
 - Create your own releases by simple steps, click [here](https://bit.ly/3dhiACW) to do it.
+
+### Star this repository if you liked it.
