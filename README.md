@@ -4,10 +4,10 @@
 This repository will allow you to download the latest [ReVanced Applications](https://github.com/Ultimatinium/yt/blob/main/Versions/versions.md) in the releases section. This will help people who don't want to setup build environments on their machines.
 
 ### ReVanced Applications
-- Twitter
 - YouTube
 - YouTube Music
 - Reddit
+- Twitter
 
 ### Notes
 - There are no `root` variant here, all the releases are `nonroot` variants.
@@ -16,7 +16,7 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 
 - See the included and excluded patches [here](https://github.com/Ultimatinium/yt/blob/main/revanced/patches.txt).
 
-- All the app here are latest compatible versions from [APK Mirror](https://www.apkmirror.com) website (see the latest compatible versions [here](https://github.com/Ultimatinium/yt/blob/main/Versions/versions.md)) so there is no guarantee that the applications here are the latest update like on Google Play Store.
+- All the app here are latest compatible versions from [APK Mirror](https://www.apkmirror.com) and [UpToDown](https://en.uptodown.com) website (see the latest compatible versions [here](https://github.com/Ultimatinium/yt/blob/main/Versions/versions.md)) so there is no guarantee that the applications here are the latest update like on Google Play Store.
 
 ### Credits
 - [ReVanced](https://github.com/revanced) for all the patch.
