@@ -23,7 +23,7 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 
 - Thanks to [j-hc](https://github.com/j-hc) for the APK Mirror script from this repository [revanced-magisk-mudule](https://github.com/j-hc/revanced-magisk-module).
 
-- Thanks to [Stonks](https://phcorner.net/members/stonks.1530736) from [PH Corner](https://phcorner.net) for this effortless repository.
+- Thanks to me ([Stonks](https://phcorner.net/members/stonks.1530736) from [PH Corner](https://phcorner.net)) for this effortless repository.
 
 ### Where to download?
 - First, click [here](https://github.com/Ultimatinium/yt/releases).
