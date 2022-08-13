@@ -11,10 +11,12 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 - Micro G
 
 ### Stats
-- Build ReVanved
+Build ReVanved 
+
 [![](https://github.com/Ultimatinium/yt/actions/workflows/Build%20All.yml/badge.svg)](https://github.com/Ultimatinium/Build%20All/actions/workflows/Build%20All.yml)
 
-- GitHub Downloads
+GitHub Downloads
+
   <a href="https://github.com/Ultimatinium/yt/release">
 <img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Stable%20Version%20Downloads&color=%6BDDD5"></a>
   <a href="https://github.com/Ultimatinium/yt-experimental/release">
