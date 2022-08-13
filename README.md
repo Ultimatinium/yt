@@ -39,7 +39,8 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 
 - I will try to update everyday, so stay tuned.
 
-- For the Beta/Experimental YouTube and YouTube Music, click [here](https://github.com/Ultimatinium/yt-experimental/releases).
+### Beta Version/Root Variants
+- For the Beta/Experimental YouTube and YouTube Music with Root Variants, click [here](https://github.com/Ultimatinium/yt-experimental).
 
 ### You want to create your own?
 - Create your own releases by simple steps, click [here](https://bit.ly/3dhiACW) to do it.
