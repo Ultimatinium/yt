@@ -10,6 +10,14 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 - Twitter
 - Micro G
 
+### Stats
+- Build ReVanved
+[![](https://github.com/Ultimatinium/yt/actions/workflows/Build%20All.yml/badge.svg)](https://github.com/Ultimatinium/Build%20All/actions/workflows/Build%20All.yml)
+
+- GitHub Downloads
+  <a href="https://github.com/Ultimatinium/yt/release">
+<img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Total%20Downloads&color=%6BDDD5"></a>
+
 ### Notes
 - There are no `root` variant here, all the releases are `nonroot` variants.
 
@@ -31,6 +39,7 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 - Thanks to me ([Stonks](https://phcorner.net/members/stonks.1530736) from [PH Corner](https://phcorner.net)) for this effortless repository.
 
 ### Where to download?
+
 - First, click [here](https://github.com/Ultimatinium/yt/releases).
 
 - Click the `Assets` button.
