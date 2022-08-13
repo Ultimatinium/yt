@@ -16,7 +16,9 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 
 - GitHub Downloads
   <a href="https://github.com/Ultimatinium/yt/release">
-<img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Total%20Downloads&color=%6BDDD5"></a>
+<img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Stable%20Version%20Downloads&color=%6BDDD5"></a>
+  <a href="https://github.com/Ultimatinium/yt-experimental/release">
+<img src="https://img.shields.io/github/downloads/Ultimatinium/yt-experimental/total?label=Beta/Experimental%20Version%20Downloads&color=%6BDDD5"></a>
 
 ### Notes
 - There are no `root` variant here, all the releases are `nonroot` variants.
