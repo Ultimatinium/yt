@@ -52,11 +52,11 @@ do
     fi
 done
 
-echo "Fetching microG"
+echo "Fetching Micro-G"
 chmod +x apkeep
-if [ ! -f "vanced-microg.apk" ]
+if [ ! -f "micro.g.apk" ]
 then
-    echo "Downloading Vanced microG"
+    echo "Downloading Vanced Micro-G"
     ./apkeep -a com.mgoogle.android.gms@${VMG_VERSION} .
     mv com.mgoogle.android.gms@${VMG_VERSION}.apk micro.g.apk
 fi
@@ -67,7 +67,7 @@ fi
 echo "Preparing"
 mkdir -p output
 
-echo "Compiling ReVanced"
+echo "Compiling YouTube"
 if [ -f "com.google.android.youtube.apk" ]
 then
     echo "Compiling package"
@@ -78,15 +78,26 @@ else
     echo "Cannot find YouTube base package, skip compiling"
 fi
 
-echo "Compiling ReVanced Music"
-if [ -f "com.google.android.apps.youtube.music.apk" ]
+echo "Compiling YouTube Music arm64-v8a"
+if [ -f "com.google.android.apps.youtube.music.1.apk" ]
 then
     echo "Compiling package"
     java -jar revanced-cli.jar -b revanced-patches.jar \
                                ${patches[@]} \
-                               -a com.google.android.apps.youtube.music.apk -o output/youtube.music.apk
+                               -a com.google.android.apps.youtube.music.1.apk -o output/youtube.music.arm64-v8a.apk
 else
-    echo "Cannot find YouTube Music base package, skip compiling"
+    echo "Cannot find YouTube Music arm64-v8a base package, skip compiling"
+fi
+
+echo "Compiling ReVanced Music arm-v7a"
+if [ -f "com.google.android.apps.youtube.music.2.apk" ]
+then
+    echo "Compiling package"
+    java -jar revanced-cli.jar -b revanced-patches.jar \
+                               ${patches[@]} \
+                               -a com.google.android.apps.youtube.music.2.apk -o output/youtube.music.arm-v7a.apk
+else
+    echo "Cannot find YouTube Music arm-v7a base package, skip compiling"
 fi
 
 echo "Done compiling"
