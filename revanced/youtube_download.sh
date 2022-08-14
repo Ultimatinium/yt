@@ -4,7 +4,8 @@ echo "Declaring variables"
 declare -A apks
 
 apks["com.google.android.youtube.apk"]=dl_youtube
-apks["com.google.android.apps.youtube.music.apk"]=dl_youtube-music
+apks["com.google.android.apps.youtube.music.1.apk"]=dl_youtube-music-arm64-v8a
+apks["com.google.android.apps.youtube.music.2.apk"]=dl_youtube-music-arm-v7a
 
 WGET_HEADER="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 ARM_V7A="arm-v7a"
@@ -60,7 +61,7 @@ dl_youtube()
     fi
 }
 
-dl_youtube-music()
+dl_youtube-music-arm64-v8a()
 {
     local arch=$ARM64_V8A
     echo "Downloading YouTube Music (${arch})"
@@ -69,7 +70,7 @@ dl_youtube-music()
     last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube-music" | get_largest_ver)}"
 
     echo "Selected version: ${last_ver}"
-    local base_apk="com.google.android.apps.youtube.music.apk"
+    local base_apk="com.google.android.apps.youtube.music.1.apk"
     if [ ! -f "$base_apk" ]
     then
         if [ "$arch" = "$ARM_V7A" ]
@@ -78,6 +79,33 @@ dl_youtube-music()
 	elif [ "$arch" = "$ARM64_V8A" ]
 	then
             local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
+        fi
+        declare -r dl_url=$(dl_apk "https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-${last_ver//./-}-release/" \
+                "$regexp_arch" \
+                "$base_apk")
+        echo "YouTube Music (${arch}) v${last_ver}"
+        echo "Downloaded from: [YouTube Music (${arch}) - APKMirror]($dl_url)"
+    fi
+}
+
+dl_youtube-music-arm-v7a()
+{
+    local arch=$ARM_7A
+    echo "Downloading YouTube Music (${arch})"
+    local last_ver
+    last_ver="$version"
+    last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube-music" | get_largest_ver)}"
+
+    echo "Selected version: ${last_ver}"
+    local base_apk="com.google.android.apps.youtube.music.2.apk"
+    if [ ! -f "$base_apk" ]
+    then
+        if [ "$arch" = "$ARM64_V8A" ]
+	then
+            local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
+	elif [ "$arch" = "$ARM_V7A" ]
+	then
+            local regexp_arch='armeabi-v7a</div>[^@]*@\([^"]*\)'
         fi
         declare -r dl_url=$(dl_apk "https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-${last_ver//./-}-release/" \
                 "$regexp_arch" \
