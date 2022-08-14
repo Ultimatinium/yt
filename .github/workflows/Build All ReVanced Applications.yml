@@ -20,55 +20,55 @@ jobs:
 
     - name: Download base packages
       run: |
-        cd rereddit
+        cd reddit
         python reddit_download.py
 
-    - name: Compile ReReddit
+    - name: Compile Reddit
       run: |
-        cd rereddit
-        chmod +x compile_rereddit.sh
-        ./compile_rereddit.sh
+        cd reddit
+        chmod +x compile_reddit.sh
+        ./compile_reddit.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Sign packages
       run: |
-        chmod +x revanced/sign_packages.sh
-        ./revanced/sign_packages.sh
+        chmod +x youtube/sign_packages.sh
+        ./youtube/sign_packages.sh
 
     - name: Download base packages
       run: |
-        cd retwitter
+        cd twitter
         python twitter_download.py
 
-    - name: Compile ReTwitter
+    - name: Compile Twitter
       run: |
-        cd retwitter
-        chmod +x compile_retwitter.sh
-        ./compile_retwitter.sh
+        cd twitter
+        chmod +x compile_twitter.sh
+        ./compile_twitter.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Sign packages
       run: |
-        chmod +x revanced/sign_packages.sh
-        ./revanced/sign_packages.sh
+        chmod +x youtube/sign_packages.sh
+        ./youtube/sign_packages.sh
 
     - name: Download base packages
       run: |
-        cd revanced
+        cd youtube
         chmod +x youtube_download.sh
         ./youtube_download.sh
 
     - name: Compile YouTube
       run: |
-        cd revanced
-        chmod +x compile_revanced.sh
-        ./compile_revanced.sh
+        cd youtube
+        chmod +x compile_youtube.sh
+        ./compile_youtube.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Sign packages
       run: |
-        chmod +x revanced/sign_packages.sh
-        ./revanced/sign_packages.sh
+        chmod +x youtube/sign_packages.sh
+        ./youtube/sign_packages.sh
 
     - name: Upload packages
       uses: marvinpinto/action-automatic-releases@v1.2.1
@@ -78,7 +78,7 @@ jobs:
         draft: true
         title: "${{ env.date_now }} - ReVanced Latest"
         files: |
-          revanced/vanced-microg.apk
-          revanced/output/release/*.apk
-          rereddit/output/release/*.apk
-          retwitter/output/release/*.apk
+          youtube/vanced-microg.apk
+          youtube/output/release/*.apk
+          reddit/output/release/*.apk
+          twitter/output/release/*.apk
