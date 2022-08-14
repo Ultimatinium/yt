@@ -44,5 +44,6 @@ jobs:
         draft: true
         title: "${{ env.date_now }} - ReVanced YouTube"
         files: |
+          rereddit/output/release/*.apk
           revanced/vanced-microg.apk
           revanced/output/release/*.apk
