@@ -36,17 +36,17 @@ echo "Preparing"
 [ -d "rereddit" ] && mkdir -p rereddit/output/release
 
 echo "Signing packages"
-if [ -f revanced/output/"revanced.apk" ]
+if [ -f revanced/output/"youtube.apk" ]
 then
-    echo "Signing ReVanced"
+    echo "Signing YouTube"
     java -jar uber-apk-signer.jar --allowResign -a revanced/output -o revanced/output/release
-elif [ -f retwitter/output/"retwitter.apk" ]
+elif [ -f retwitter/output/"twitter.apk" ]
 then
-    echo "Signing ReTwitter"
+    echo "Signing Twitter"
     java -jar uber-apk-signer.jar --allowResign -a retwitter/output -o retwitter/output/release
-elif [ -f rereddit/output/"rereddit.apk" ]
+elif [ -f rereddit/output/"reddit.apk" ]
 then
-    echo "Signing ReReddit"
+    echo "Signing Reddit"
     java -jar uber-apk-signer.jar --allowResign -a rereddit/output -o rereddit/output/release
 fi
 
