@@ -1,4 +1,6 @@
 # INCLUDED PATCHES
+timeline-ads
+general-reddit-ads
 seekbar-tapping
 minimized-playback
 return-youtube-dislike
