@@ -34,13 +34,3 @@ jobs:
       run: |
         chmod +x revanced/sign_packages.sh
         ./revanced/sign_packages.sh
-
-    - name: Upload packages
-      uses: marvinpinto/action-automatic-releases@v1.2.1
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "${{ env.date_now }}"
-        draft: true
-        title: "${{ env.date_now }} - ReVanced Twitter"
-        files: |
-          retwitter/output/release/*.apk
