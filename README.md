@@ -13,7 +13,7 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 ### Stats
 Build ReVanved 
 
-[![](https://github.com/Ultimatinium/yt/actions/workflows/Build%20All.yml/badge.svg)](https://github.com/Ultimatinium/Build%20All/actions/workflows/Build%20All.yml)
+[![](https://github.com/Ultimatinium/yt/actions/workflows/Build%20All%20ReVanced%20Applications.yml/badge.svg)](https://github.com/Ultimatinium/Build%20All%20ReVanced%20Applications/actions/workflows/Build%20All%20ReVanced%20Applications.yml)
 
 GitHub Downloads
 
