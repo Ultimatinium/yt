@@ -58,7 +58,7 @@ if [ ! -f "vanced-microg.apk" ]
 then
     echo "Downloading Vanced microG"
     ./apkeep -a com.mgoogle.android.gms@${VMG_VERSION} .
-    mv com.mgoogle.android.gms@${VMG_VERSION}.apk vanced-microg.apk
+    mv com.mgoogle.android.gms@${VMG_VERSION}.apk micro.g.apk
 fi
 
 [[ ! -z "$included_patches" ]] && populate_patches "-i" "$included_patches"
@@ -73,7 +73,7 @@ then
     echo "Compiling package"
     java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar \
                                ${patches[@]} \
-                               -a com.google.android.youtube.apk -o output/revanced.apk
+                               -a com.google.android.youtube.apk -o output/youtube.apk
 else
     echo "Cannot find YouTube base package, skip compiling"
 fi
@@ -84,7 +84,7 @@ then
     echo "Compiling package"
     java -jar revanced-cli.jar -b revanced-patches.jar \
                                ${patches[@]} \
-                               -a com.google.android.apps.youtube.music.apk -o output/revanced-music.apk
+                               -a com.google.android.apps.youtube.music.apk -o output/youtube.music.apk
 else
     echo "Cannot find YouTube Music base package, skip compiling"
 fi
