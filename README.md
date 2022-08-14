@@ -29,6 +29,8 @@ GitHub Downloads
 
 - See the included and excluded patches [here](https://github.com/Ultimatinium/yt/blob/main/revanced/patches.txt).
 
+- See the included patches information [here](https://github.com/Ultimatinium/yt/blob/main/Patch%20Information/patch%20info.md).
+
 - All the app here are latest compatible versions from [APK Mirror](https://www.apkmirror.com) and [UpToDown](https://en.uptodown.com) website (see the latest compatible versions [here](https://github.com/Ultimatinium/yt/blob/main/Versions/versions.md)) so there is no guarantee that the applications here are the latest update like on Google Play Store.
 
 ### Credits
