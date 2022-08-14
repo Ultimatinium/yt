@@ -1,4 +1,4 @@
-name: Build YouTube
+name: Build All ReVanced Applications
 
 on:
   workflow_dispatch:
@@ -17,6 +17,40 @@ jobs:
         distribution: "zulu"
         java-version: "17"
         java-package: jdk
+
+    - name: Download base packages
+      run: |
+        cd rereddit
+        python reddit_download.py
+
+    - name: Compile ReReddit
+      run: |
+        cd rereddit
+        chmod +x compile_rereddit.sh
+        ./compile_rereddit.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign packages
+      run: |
+        chmod +x revanced/sign_packages.sh
+        ./revanced/sign_packages.sh
+
+    - name: Download base packages
+      run: |
+        cd retwitter
+        python twitter_download.py
+
+    - name: Compile ReTwitter
+      run: |
+        cd retwitter
+        chmod +x compile_retwitter.sh
+        ./compile_retwitter.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign packages
+      run: |
+        chmod +x revanced/sign_packages.sh
+        ./revanced/sign_packages.sh
 
     - name: Download base packages
       run: |
@@ -42,9 +76,9 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "${{ env.date_now }}"
         draft: true
-        title: "${{ env.date_now }} - Latest Release"
+        title: "${{ env.date_now }} - ReVanced Latest"
         files: |
-          rereddit/output/release/*.apk
-          retwitter/output/release/*.apk
           revanced/vanced-microg.apk
           revanced/output/release/*.apk
+          rereddit/output/release/*.apk
+          retwitter/output/release/*.apk
