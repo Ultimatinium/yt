@@ -34,13 +34,13 @@ done
 echo "Preparing"
 mkdir -p output
 
-echo "Compiling ReReddit"
+echo "Compiling Reddit"
 if [ -f "com.reddit.frontpage.apk" ]
 then
     echo "Compiling package"
     java -jar revanced-cli.jar -b revanced-patches.jar -r \
                                -i general-reddit-ads \
-                               -a com.reddit.frontpage.apk -o output/rereddit.apk
+                               -a com.reddit.frontpage.apk -o output/reddit.apk
 else
     echo "Cannot find Reddit base package, skip compiling"
 fi
