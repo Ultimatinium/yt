@@ -42,7 +42,7 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "${{ env.date_now }}"
         draft: true
-        title: "${{ env.date_now }} - ReVanced YouTube"
+        title: "${{ env.date_now }} - Latest Release"
         files: |
           rereddit/output/release/*.apk
           retwitter/output/release/*.apk
