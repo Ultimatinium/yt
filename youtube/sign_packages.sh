@@ -31,23 +31,23 @@ do
 done
 
 echo "Preparing"
-[ -d "revanced" ] && mkdir -p revanced/output/release
-[ -d "retwitter" ] && mkdir -p retwitter/output/release
-[ -d "rereddit" ] && mkdir -p rereddit/output/release
+[ -d "youtube" ] && mkdir -p youtube/output/release
+[ -d "twitter" ] && mkdir -p twitter/output/release
+[ -d "reddit" ] && mkdir -p reddit/output/release
 
 echo "Signing packages"
-if [ -f revanced/output/"youtube.apk" ]
+if [ -f youtube/output/"youtube.apk" ]
 then
     echo "Signing YouTube"
-    java -jar uber-apk-signer.jar --allowResign -a revanced/output -o revanced/output/release
-elif [ -f retwitter/output/"twitter.apk" ]
+    java -jar uber-apk-signer.jar --allowResign -a youtube/output -o youtube/output/release
+elif [ -f twitter/output/"twitter.apk" ]
 then
     echo "Signing Twitter"
-    java -jar uber-apk-signer.jar --allowResign -a retwitter/output -o retwitter/output/release
-elif [ -f rereddit/output/"reddit.apk" ]
+    java -jar uber-apk-signer.jar --allowResign -a twitter/output -o twitter/output/release
+elif [ -f reddit/output/"reddit.apk" ]
 then
     echo "Signing Reddit"
-    java -jar uber-apk-signer.jar --allowResign -a rereddit/output -o rereddit/output/release
+    java -jar uber-apk-signer.jar --allowResign -a reddit/output -o reddit/output/release
 fi
 
 echo "Done signing"
