@@ -34,7 +34,7 @@ done
 echo "Preparing"
 mkdir -p output
 
-echo "Compiling ReTikTok"
+echo "Compiling TikTok"
 if [ -f "com.zhiliaoapp.musically.apk" ]
 then
     echo "Compiling package"
