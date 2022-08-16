@@ -49,10 +49,19 @@ do
         echo "Downloading $artifact"
         curl -sLo "$artifact" $(get_artifact_download_url ${artifacts[$artifact]})
     fi
+done
+
+echo "Fetching microG"
+chmod +x apkeep
+if [ ! -f "vanced-microg.apk" ]
+then
+    echo "Downloading Vanced microG"
+    ./apkeep -a com.mgoogle.android.gms@${VMG_VERSION} .
+    mv com.mgoogle.android.gms@${VMG_VERSION}.apk vanced-microg.apk
+fi
 
 [[ ! -z "$included_patches" ]] && populate_patches "-i" "$included_patches"
 [[ ! -z "$excluded_patches" ]] && populate_patches "-e" "$excluded_patches"
-
 echo "Preparing"
 mkdir -p output
 
