@@ -61,60 +61,6 @@ dl_youtube()
     fi
 }
 
-dl_youtube-music-arm64-v8a()
-{
-    local arch=$ARM64_V8A
-    echo "Downloading YouTube Music (${arch})"
-    local last_ver
-    last_ver="$version"
-    last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube-music" | get_largest_ver)}"
-
-    echo "Selected version: ${last_ver}"
-    local base_apk="com.google.android.apps.youtube.music.apk"
-    if [ ! -f "$base_apk" ]
-    then
-        if [ "$arch" = "$ARM_V7A" ]
-	then
-            local regexp_arch='armeabi-v7a</div>[^@]*@\([^"]*\)'
-	elif [ "$arch" = "$ARM64_V8A" ]
-	then
-            local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
-        fi
-        declare -r dl_url=$(dl_apk "https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-${last_ver//./-}-release/" \
-                "$regexp_arch" \
-                "$base_apk")
-        echo "YouTube Music (${arch}) v${last_ver}"
-        echo "Downloaded from: [YouTube Music (${arch}) - APKMirror]($dl_url)"
-    fi
-}
-
-dl_youtube-music-arm-v7a()
-{
-    local arch=$ARM_7A
-    echo "Downloading YouTube Music (${arch})"
-    local last_ver
-    last_ver="$version"
-    last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube-music" | get_largest_ver)}"
-
-    echo "Selected version: ${last_ver}"
-    local base_apk="com.google.android.apps.youtube.music.apk"
-    if [ ! -f "$base_apk" ]
-    then
-        if [ "$arch" = "$ARM64_V8A" ]
-	then
-            local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
-	elif [ "$arch" = "$ARM_V7A" ]
-	then
-            local regexp_arch='armeabi-v7a</div>[^@]*@\([^"]*\)'
-        fi
-        declare -r dl_url=$(dl_apk "https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-${last_ver//./-}-release/" \
-                "$regexp_arch" \
-                "$base_apk")
-        echo "YouTube Music (${arch}) v${last_ver}"
-        echo "Downloaded from: [YouTube Music (${arch}) - APKMirror]($dl_url)"
-    fi
-}
-
 for apk in "${!apks[@]}"
 do
     if [ ! -f $apk ]
