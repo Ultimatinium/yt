@@ -35,6 +35,8 @@ echo "Preparing"
 [ -d "twitter" ] && mkdir -p twitter/output/release
 [ -d "reddit" ] && mkdir -p reddit/output/release
 [ -d "tiktok" ] && mkdir -p tiktok/output/release
+[ -d "yt-music-v7a" ] && mkdir -p yt-music-v7a/output/release
+[ -d "yt-music-64-v8a" ] && mkdir -p yt-music-64-v8a/output/release
 
 echo "Signing packages"
 if [ -f youtube/output/"youtube.apk" ]
@@ -53,6 +55,14 @@ elif [ -f tiktok/output/"tiktok.apk" ]
 then
     echo "Signing TikTok"
     java -jar uber-apk-signer.jar --allowResign -a tiktok/output -o tiktok/output/release
+elif [ -f yt-music-v7a/output/"yt-music-v7a.apk" ]
+then
+    echo "Signing YouTube Music arm-v7a"
+    java -jar uber-apk-signer.jar --allowResign -a yt-music-v7a/output -o yt-music-v7a/output/release
+elif [ -f yt-music-64-v8a/output/"yt-music-64-v8a.apk" ]
+then
+    echo "Signing YouTube Music arm64-v8a"
+    java -jar uber-apk-signer.jar --allowResign -a yt-music-64-v8a/output -o yt-music-64-v8a/output/release
 fi
 
 echo "Done signing"
