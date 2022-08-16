@@ -3,7 +3,7 @@
 echo "Declaring variables"
 declare -A apks
 
-apks["com.google.android.apps.youtube.music.apk"]=dl_youtube-music-arm-v7a
+apks["com.google.android.apps.youtube.music.apk"]=dl_youtube-music-arm64-v8a
 
 WGET_HEADER="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 ARM_V7A="arm-v7a"
@@ -72,7 +72,7 @@ do
     if [ ! -f $apk ]
     then
         echo "Downloading $apk"
-        version=$(jq -r ".\"$apk\"" <youtube_versions.json)
+        version=$(jq -r ".\"$apk\"" <64-v8a.json)
         ${apks[$apk]}
     fi
 done
