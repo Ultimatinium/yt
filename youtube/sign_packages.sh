@@ -34,6 +34,7 @@ echo "Preparing"
 [ -d "youtube" ] && mkdir -p youtube/output/release
 [ -d "twitter" ] && mkdir -p twitter/output/release
 [ -d "reddit" ] && mkdir -p reddit/output/release
+[ -d "tiktok" ] && mkdir -p tiktok/output/release
 
 echo "Signing packages"
 if [ -f youtube/output/"youtube.apk" ]
