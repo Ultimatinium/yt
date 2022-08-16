@@ -18,7 +18,7 @@ jobs:
         java-version: "17"
         java-package: jdk
 
-    - name: Download base packages
+    - name: Download Reddit
       run: |
         cd reddit
         python reddit_download.py
@@ -30,12 +30,12 @@ jobs:
         ./compile_reddit.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    - name: Sign packages
+    - name: Sign Reddit
       run: |
         chmod +x youtube/sign_packages.sh
         ./youtube/sign_packages.sh
 
-    - name: Download base packages
+    - name: Download Twitter
       run: |
         cd twitter
         python twitter_download.py
@@ -47,12 +47,12 @@ jobs:
         ./compile_twitter.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    - name: Sign packages
+    - name: Sign Twitter
       run: |
         chmod +x youtube/sign_packages.sh
         ./youtube/sign_packages.sh
 
-    - name: Download base packages
+    - name: Download YouTube
       run: |
         cd youtube
         chmod +x youtube_download.sh
@@ -65,11 +65,47 @@ jobs:
         ./compile_youtube.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    - name: Sign packages
+    - name: Sign YouTube
+      run: |
+        chmod +x youtube/sign_packages.sh
+        ./youtube/sign_packages.sh
+        
+    - name: Download YouTube Music v7a
+      run: |
+        cd youtube/music/v7a
+        chmod +x download_music.sh
+        ./download_music.sh
+        
+    - name: Compile YouTube Music v7a
+      run: |
+        cd youtube/music/v7a
+        chmod +x compile.sh
+        ./compile.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign YouTube Music v7a
       run: |
         chmod +x youtube/sign_packages.sh
         ./youtube/sign_packages.sh
 
+    - name: Download YouTube Music 64-v8a
+      run: |
+        cd youtube/music/64-v8a
+        chmod +x download_music.sh
+        ./download_music.sh
+        
+    - name: Compile YouTube Music 64-v8a
+      run: |
+        cd youtube/music/64-v8a
+        chmod +x compile.sh
+        ./compile.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign YouTube Music 64-v8a
+      run: |
+        chmod +x youtube/sign_packages.sh
+        ./youtube/sign_packages.sh
+        
     - name: Upload packages
       uses: marvinpinto/action-automatic-releases@v1.2.1
       with:
@@ -78,7 +114,9 @@ jobs:
         draft: true
         title: "${{ env.date_now }} - ReVanced Latest"
         files: |
-          youtube/vanced-microg.apk
+          youtube/micro.g.apk
           youtube/output/release/*.apk
+          youtube/music/v7a/output/release/*.apk
+          youtube/music/64-v8a/output/release/*.apk
           reddit/output/release/*.apk
           twitter/output/release/*.apk
