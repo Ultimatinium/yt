@@ -43,14 +43,6 @@ if [ -f youtube/output/"youtube.apk" ]
 then
     echo "Signing YouTube"
     java -jar uber-apk-signer.jar --allowResign -a youtube/output -o youtube/output/release
-elif [ -f yt-music-v7a/output/"youtube.music.arm-v7a.apk" ]
-then
-    echo "Signing YouTube Music v7a"
-    java -jar uber-apk-signer.jar --allowResign -a yt-music-v7a/output -o yt-music-v7a/output/release
-elif [ -f yt-music-64-v8a/output/"youtube.music.arm64-v8a.apk" ]
-then
-    echo "Signing YouTube Music 64-v8a"
-    java -jar uber-apk-signer.jar --allowResign -a yt-music-64-v8a/output -o yt-music-64-v8a/output/release
 elif [ -f twitter/output/"twitter.apk" ]
 then
     echo "Signing Twitter"
@@ -63,6 +55,14 @@ elif [ -f tiktok/output/"tiktok.apk" ]
 then
     echo "Signing TikTok"
     java -jar uber-apk-signer.jar --allowResign -a tiktok/output -o tiktok/output/release
+elif [ -f yt-music-64-v8a/output/"youtube.music.arm64-v8a.apk" ]
+then
+    echo "Signing YouTube Music 64-v8a"
+    java -jar uber-apk-signer.jar --allowResign -a yt-music-64-v8a/output -o yt-music-64-v8a/output/release
+elif [ -f yt-music-v7a/output/"youtube.music.arm-v7a.apk" ]
+then
+    echo "Signing YouTube Music v7a"
+    java -jar uber-apk-signer.jar --allowResign -a yt-music-v7a/output -o yt-music-v7a/output/release
 fi
 
 echo "Done signing"
