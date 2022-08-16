@@ -1,6 +1,4 @@
 # INCLUDED PATCHES
-timeline-ads
-general-reddit-ads
 seekbar-tapping
 minimized-playback
 return-youtube-dislike
@@ -12,16 +10,7 @@ settings
 remember-video-quality
 video-ads
 general-ads
-minimized-playback-music
-hide-get-premium
-upgrade-button-remover
-background-play
-music-microg-support
-music-video-ads
-codecs-unlock
-exclusive-audio-playback
 amoled
-compact-header
 # EXCLUDED PATCHES
 swipe-controls
 disable-create-button
@@ -37,5 +26,4 @@ enable-debugging
 custom-playback-speed
 hdr-auto-brightness
 hide-infocard-suggestions
-tasteBuilder-remover
 premium-heading
