@@ -1,0 +1,12 @@
+# INCLUDED PATCHES
+minimized-playback-music
+hide-get-premium
+upgrade-button-remover
+background-play
+music-microg-support
+music-video-ads
+codecs-unlock
+exclusive-audio-playback
+compact-header
+# EXCLUDED PATCHES
+tasteBuilder-remover
