@@ -114,7 +114,7 @@ jobs:
         draft: true
         title: "${{ env.date_now }} - ReVanced Latest"
         files: |
-          youtube/micro.g.apk
+          youtube/vanced-microg.apk
           youtube/output/release/*.apk
           youtube/music/v7a/output/release/*.apk
           youtube/music/64-v8a/output/release/*.apk
