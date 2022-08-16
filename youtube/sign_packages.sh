@@ -56,6 +56,10 @@ elif [ -f reddit/output/"reddit.apk" ]
 then
     echo "Signing Reddit"
     java -jar uber-apk-signer.jar --allowResign -a reddit/output -o reddit/output/release
+elif [ -f reddit/output/"tiktok.apk" ]
+then
+    echo "Signing TikTok"
+    java -jar uber-apk-signer.jar --allowResign -a tiktok/output -o tiktok/output/release
 fi
 
 echo "Done signing"
