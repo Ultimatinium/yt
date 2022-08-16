@@ -72,7 +72,7 @@ then
     echo "Compiling package"
     java -jar revanced-cli.jar -b revanced-patches.jar \
                                ${patches[@]} \
-                               -a com.google.android.apps.youtube.music.apk -o output/youtube.music.arm-v7a.apk
+                               -a com.google.android.apps.youtube.music.apk -o output/yt-music-v7a
 else
     echo "Cannot find YouTube Music arm-v7a base package, skip compiling"
 fi
