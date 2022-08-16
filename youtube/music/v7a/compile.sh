@@ -49,11 +49,6 @@ do
         echo "Downloading $artifact"
         curl -sLo "$artifact" $(get_artifact_download_url ${artifacts[$artifact]})
     fi
-done
-
-echo "Loading..."
-
-fi
 
 [[ ! -z "$included_patches" ]] && populate_patches "-i" "$included_patches"
 [[ ! -z "$excluded_patches" ]] && populate_patches "-e" "$excluded_patches"
