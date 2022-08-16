@@ -7,7 +7,6 @@ music-microg-support
 music-video-ads
 codecs-unlock
 exclusive-audio-playback
-amoled
 compact-header
 # EXCLUDED PATCHES
 tasteBuilder-remover
