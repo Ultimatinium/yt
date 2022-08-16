@@ -40,6 +40,14 @@ if [ -f youtube/output/"youtube.apk" ]
 then
     echo "Signing YouTube"
     java -jar uber-apk-signer.jar --allowResign -a youtube/output -o youtube/output/release
+elif [ -f youtube/music/v7a/output/"youtube.music.arm-v7a.apk" ]
+then
+    echo "Signing YouTube Music v7a"
+    java -jar uber-apk-signer.jar --allowResign -a youtube/music/v7a/output -o youtube/music/v7a/output/release
+elif [ -f youtube/music/64-v8a/output/"youtube.music.arm64-v8a.apk" ]
+then
+    echo "Signing YouTube Music 64-v8a"
+    java -jar uber-apk-signer.jar --allowResign -a youtube/music/64-v8a/output -o youtube/music/64-v8a/output/release
 elif [ -f twitter/output/"twitter.apk" ]
 then
     echo "Signing Twitter"
