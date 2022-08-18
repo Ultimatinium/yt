@@ -26,7 +26,7 @@ jobs:
 
     - name: Compile YouTube Music arm-v7a
       run: |
-        cd youtube
+        cd yt-music-v7a
         chmod +x compile.sh
         ./compile.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
