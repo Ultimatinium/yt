@@ -18,6 +18,23 @@ jobs:
         java-version: "17"
         java-package: jdk
 
+    - name: Download YouTube Music arm-v7a
+      run: |
+        cd yt-music-v7a
+        python download.py
+
+    - name: Compile YouTube Music arm-v7a
+      run: |
+        cd yt-music-v7a
+        chmod +x compile.sh
+        ./compile.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign YouTube Music arm-v7a
+      run: |
+        chmod +x youtube/sign.sh
+        ./youtube/sign.sh
+
     - name: Download TikTok
       run: |
         cd tiktok
@@ -69,20 +86,20 @@ jobs:
         chmod +x youtube/sign.sh
         ./youtube/sign.sh
 
-    - name: Download YouTube
+    - name: Download YouTube & YouTube Music arm64-v8a
       run: |
         cd youtube
         chmod +x download.sh
         ./download.sh
 
-    - name: Compile YouTube
+    - name: Compile YouTube & YouTube Music arm64-v8a
       run: |
         cd youtube
         chmod +x compile.sh
         ./compile.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    - name: Sign YouTube
+    - name: Sign YouTube & YouTube Music arm64-v8a
       run: |
         chmod +x youtube/sign.sh
         ./youtube/sign.sh
@@ -100,3 +117,4 @@ jobs:
           twitter/output/release/*.apk
           reddit/output/release/*.apk
           tiktok/output/release/*.apk
+          yt-music-v7a/output/release/*.apk
