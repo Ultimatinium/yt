@@ -21,7 +21,7 @@ jobs:
     - name: Download TikTok
       run: |
         cd tiktok
-        chmod +x download.sh
+        python download.py
         ./download.sh
 
     - name: Compile TikTok
