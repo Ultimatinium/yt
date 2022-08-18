@@ -3,6 +3,9 @@
 ### Twitter
 - Removed ads from the Twitter timeline.
 
+### TikTok
+- Removes ads from TikTok.
+
 ### Reddit
 - Removed general ads from the Reddit frontpage and subreddits.
 
@@ -39,6 +42,8 @@
 - Enables the original quality flyout menu.
 
 - Integrate SponsorBlock.
+
+- Enables the tablet mini player layout.
 
 - Allows YouTube ReVanced to run without root and under a different package name with Vanced MicroG.
 
