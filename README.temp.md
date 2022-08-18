@@ -5,7 +5,8 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 
 ### ReVanced Applications
 - YouTube
-- YouTube Music
+- YouTube Music arm64-v8a/arm-v7a
+- TikTok
 - Reddit
 - Twitter
 - Micro G
