@@ -1,17 +1,15 @@
 #!/bin/bash
 
-VMG_VERSION="0.2.24.220220"
+patch_file=./patches.txt
 
-patches_file=./yt.music.patch.txt
+excluded_start="$(grep -n -m1 'EXCLUDE PATCHES' "$patch_file" | cut -d':' -f1)"
+included_start="$(grep -n -m1 'INCLUDE PATCHES' "$patch_file" | cut -d':' -f1)"
 
-included_start="$(grep -n -m1 'INCLUDED PATCHES' "$patches_file" | cut -d':' -f1)"
-excluded_start="$(grep -n -m1 'EXCLUDED PATCHES' "$patches_file" | cut -d':' -f1)"
+excluded_patches="$(tail -n +$excluded_start $patch_file | head -n "$(( included_start - excluded_start ))" | grep '^[^#[:blank:]]')"
+included_patches="$(tail -n +$included_start $patch_file | grep '^[^#[:blank:]]')"
 
-included_patches="$(tail -n +$included_start $patches_file | head -n "$(( excluded_start - included_start ))" | grep '^[^#[:blank:]]')"
-excluded_patches="$(tail -n +$excluded_start $patches_file | grep '^[^#[:blank:]]')"
-
-echo "Declaring variables"
 declare -a patches
+
 declare -A artifacts
 
 artifacts["revanced-cli.jar"]="revanced/revanced-cli revanced-cli .jar"
@@ -37,7 +35,7 @@ populate_patches()
 echo "Cleaning up"
 if [[ "$1" == "clean" ]]
     then
-    rm -f revanced-cli.jar revanced-patches.jar
+    rm -f revanced-cli.jar revanced-integrations.apk revanced-patches.jar
     exit
 fi
 
@@ -51,16 +49,20 @@ do
     fi
 done
 
+echo "Populate Patches"
+[[ ! -z "$excluded_patches" ]] && populate_patches "-e" "$excluded_patches"
+[[ ! -z "$included_patches" ]] && populate_patches "-i" "$included_patches"
+
 echo "Preparing"
 mkdir -p output
 
-echo "Compiling ReVanced Music arm-v7a"
+echo "Compiling YouTube Music arm-v7a"
 if [ -f "com.google.android.apps.youtube.music.apk" ]
 then
     echo "Compiling package"
     java -jar revanced-cli.jar -b revanced-patches.jar \
                                ${patches[@]} \
-                               -a com.google.android.apps.youtube.music.apk -o output/yt-music-v7a.apk
+                               -a com.google.android.apps.youtube.music.apk -o output/revanced-music.apk
 else
     echo "Cannot find YouTube Music arm-v7a base package, skip compiling"
 fi
