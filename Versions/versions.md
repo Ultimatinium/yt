@@ -1,8 +1,17 @@
 ### List of compatible applications from [APK Mirror](https://www.apkmirror.com) and [UpToDown](https://en.uptodown.com) for [ReVanced Patches](https://github.com/revanced/revanced-patches).
-APK Mirror YouTube Music : [5.17.51](https://www.apkmirror.com/apk/google-inc/youtube-music)
 
-APK Mirror YouTube : [17.29.34](https://www.apkmirror.com/apk/google-inc/youtube)
+YouTube Music
+- APK Mirror arm64-v8a : [5.17.51](https://www.apkmirror.com/apk/google-inc/youtube-music)
+- UpToDown arm-v7a : [5.27.51](https://youtube-music.en.uptodown.com)
 
-UpToDown Reddit : [2022.30.0](https://reddit-official-app.en.uptodown.com)
+YouTube
+- APK Mirror : [17.29.34](https://www.apkmirror.com/apk/google-inc/youtube)
 
-UpToDown Twitter : [9.54.0-Release.0](https://twitter.en.uptodown.com)
+Reddit
+- UpToDown : [2022.31.0](https://reddit-official-app.en.uptodown.com)
+
+Twitter
+- UpToDown : [9.55.0-Release.0](https://twitter.en.uptodown.com)
+
+TikTok
+- UpToDown : [25.7.5](https://tiktok.en.uptodown.com)
