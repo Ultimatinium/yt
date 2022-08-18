@@ -2,7 +2,7 @@
 
 VMG_VERSION="0.2.24.220220"
 
-patches_file=./patches.txt
+patches_file=./revanced_patches.md
 
 included_start="$(grep -n -m1 'INCLUDED PATCHES' "$patches_file" | cut -d':' -f1)"
 excluded_start="$(grep -n -m1 'EXCLUDED PATCHES' "$patches_file" | cut -d':' -f1)"
@@ -73,7 +73,7 @@ then
     echo "Compiling package"
     java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar \
                                ${patches[@]} \
-                               -a com.google.android.youtube.apk -o output/youtube.apk
+                               -a com.google.android.youtube.apk -o output/revanced.apk
 else
     echo "Cannot find YouTube base package, skip compiling"
 fi
@@ -86,7 +86,7 @@ then
                                ${patches[@]} \
                                -a com.google.android.apps.youtube.music.apk -o output/yt-music-64-v8a.apk
 else
-    echo "Cannot find YouTube Music arm-v7a base package, skip compiling"
+    echo "Cannot find YouTube Music base package, skip compiling"
 fi
 
 echo "Done compiling"
