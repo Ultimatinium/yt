@@ -74,7 +74,7 @@ then
                                ${patches[@]} \
                                -a com.google.android.apps.youtube.music.apk -o output/yt-music-64-v8a.apk
 else
-    echo "Cannot find YouTube Music arm-v7a base package, skip compiling"
+    echo "Cannot find YouTube Music arm64-v8a base package, skip compiling"
 fi
 
 echo "Done compiling"
