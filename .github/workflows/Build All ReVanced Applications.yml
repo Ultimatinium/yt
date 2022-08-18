@@ -18,6 +18,24 @@ jobs:
         java-version: "17"
         java-package: jdk
 
+    - name: Download YouTube Music arm-v7a
+      run: |
+        cd yt-music-v7a
+        chmod +x download.sh
+        ./download.sh
+
+    - name: Compile YouTube Music arm-v7a
+      run: |
+        cd youtube
+        chmod +x compile.sh
+        ./compile.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign YouTube Music arm-v7a
+      run: |
+        chmod +x youtube/sign.sh
+        ./youtube/sign.sh
+
     - name: Download TikTok
       run: |
         cd tiktok
