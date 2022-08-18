@@ -9,5 +9,5 @@ def download_apk(url, filename):
     dl_url = re.findall(r'(?<=href=")https:\/\/dw.uptodown.com.*?(?=")', response.content.decode("utf-8"))[0]
     subprocess.run(["wget", dl_url, "-O", filename])
 
-print("Downloading Tiktok")
-download_apk(TIKTOK_URL, "com.zhiliaoapp.musically")
+print("Downloading TikTok")
+download_apk(TIKTOK_URL, "com.zhiliaoapp.musically.apk")
