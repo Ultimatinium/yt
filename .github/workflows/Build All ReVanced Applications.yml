@@ -21,16 +21,17 @@ jobs:
     - name: Download TikTok
       run: |
         cd tiktok
-        python download.py
+        chmod +x download.sh
+        ./download.sh
 
-    - name: Compile TikTok
+    - name: Compile ReTikTok
       run: |
-        cd reddit
+        cd tiktok
         chmod +x compile.sh
         ./compile.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    - name: Sign TikTok
+    - name: Sign packages
       run: |
         chmod +x youtube/sign.sh
         ./youtube/sign.sh
