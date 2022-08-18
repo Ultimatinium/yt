@@ -62,7 +62,7 @@ do
     if [ ! -f $apk ]
     then
         echo "Downloading $apk"
-        version=$(jq -r ".\"$apk\"" <tiktok_version.json)
+        version=$(jq -r ".\"$apk\"" <versions.json)
         ${apks[$apk]}
     fi
 done
