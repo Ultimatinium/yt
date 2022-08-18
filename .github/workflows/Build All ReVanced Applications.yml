@@ -22,7 +22,6 @@ jobs:
       run: |
         cd tiktok
         python download.py
-        ./download.sh
 
     - name: Compile TikTok
       run: |
