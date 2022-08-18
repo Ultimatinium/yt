@@ -24,14 +24,14 @@ jobs:
         chmod +x download.sh
         ./download.sh
 
-    - name: Compile ReTikTok
+    - name: Compile TikTok
       run: |
         cd tiktok
         chmod +x compile.sh
         ./compile.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-    - name: Sign packages
+    - name: Sign TikTok
       run: |
         chmod +x youtube/sign.sh
         ./youtube/sign.sh
