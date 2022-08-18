@@ -79,23 +79,12 @@ else
 fi
 
 echo "Compiling YouTube Music arm64-v8a"
-if [ -f "yt-music-64-v8a.apk" ]
+if [ -f "com.google.android.apps.youtube.music.apk" ]
 then
     echo "Compiling package"
     java -jar revanced-cli.jar -b revanced-patches.jar \
                                ${patches[@]} \
-                               -a yt-music-64-v8a.apk -o output/yt-music-64-v8a.apk
-else
-    echo "Cannot find YouTube Music arm64-v8a base package, skip compiling"
-fi
-
-echo "Compiling YouTube Music arm-v7a"
-if [ -f "yt-music-v7a.apk" ]
-then
-    echo "Compiling package"
-    java -jar revanced-cli.jar -b revanced-patches.jar \
-                               ${patches[@]} \
-                               -a yt-music-v7a.apk -o output/yt-music-v7a.apk
+                               -a com.google.android.apps.youtube.music.apk -o output/yt-music-64-v8a.apk
 else
     echo "Cannot find YouTube Music arm-v7a base package, skip compiling"
 fi
