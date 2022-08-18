@@ -2,10 +2,10 @@
 
 YouTube Music
 - APK Mirror arm64-v8a : [5.17.51](https://www.apkmirror.com/apk/google-inc/youtube-music)
-- UpToDown arm-v7a : [5.27.51](https://youtube-music.en.uptodown.com)
+- UpToDown arm-v7a : [5.17.51](https://youtube-music.en.uptodown.com)
 
 YouTube
-- APK Mirror : [17.29.34](https://www.apkmirror.com/apk/google-inc/youtube)
+- APK Mirror : [17.32.35](https://www.apkmirror.com/apk/google-inc/youtube)
 
 Reddit
 - UpToDown : [2022.31.0](https://reddit-official-app.en.uptodown.com)
