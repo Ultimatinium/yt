@@ -73,7 +73,7 @@ then
     echo "Compiling package"
     java -jar revanced-cli.jar -m revanced-integrations.apk -b revanced-patches.jar \
                                ${patches[@]} \
-                               -a com.google.android.youtube.apk -o output/revanced.apk
+                               -a com.google.android.youtube.apk -o output/youtube.apk
 else
     echo "Cannot find YouTube base package, skip compiling"
 fi
