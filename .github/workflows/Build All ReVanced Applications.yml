@@ -134,8 +134,8 @@ jobs:
         files: |
           youtube/vanced-microg.apk
           youtube/output/release/*.apk
-          yt-music-v7a/output/release/*.apk
-          yt-music-64-v8a/output/release/*.apk
+          yt-music-v7a/output/release/yt-music-v7a-aligned-debugSigned.apk
+          yt-music-64-v8a/output/release/yt-music-64-v8a-aligned-debugSigned.apk
           reddit/output/release/*.apk
           twitter/output/release/*.apk
-          tiktok/output/release/*.apk
+          tiktok/output/release/tiktok-aligned-debugSigned.apk
