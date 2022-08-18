@@ -40,7 +40,7 @@ echo "Preparing"
 echo "Signing packages"
 if [ -f youtube/output/"youtube.apk" ]
 then
-    echo "Signing YouTube"
+    echo "Signing YouTube & YouTube Music arm64-v8a"
     java -jar uber-apk-signer.jar --allowResign -a youtube/output -o youtube/output/release
 elif [ -f twitter/output/"twitter.apk" ]
 then
