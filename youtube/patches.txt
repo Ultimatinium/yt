@@ -1,4 +1,5 @@
 # INCLUDED PATCHES
+YouTube -----
 seekbar-tapping
 minimized-playback
 return-youtube-dislike
@@ -11,7 +12,18 @@ remember-video-quality
 video-ads
 general-ads
 amoled
+YouTube Music -----
+minimized-playback-music
+hide-get-premium
+upgrade-button-remover
+background-play
+music-microg-support
+music-video-ads
+codecs-unlock
+exclusive-audio-playback
+compact-header
 # EXCLUDED PATCHES
+YouTube -----
 swipe-controls
 disable-create-button
 hide-cast-button
@@ -27,3 +39,5 @@ custom-playback-speed
 hdr-auto-brightness
 hide-infocard-suggestions
 premium-heading
+YouTube Music -----
+tasteBuilder-remover
