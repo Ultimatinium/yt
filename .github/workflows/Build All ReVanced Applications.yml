@@ -18,112 +18,75 @@ jobs:
         java-version: "17"
         java-package: jdk
 
-    - name: Download Reddit
-      run: |
-        cd reddit
-        python reddit_download.py
-
-    - name: Compile Reddit
-      run: |
-        cd reddit
-        chmod +x compile_reddit.sh
-        ./compile_reddit.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-    - name: Sign Reddit
-      run: |
-        chmod +x youtube/sign_packages.sh
-        ./youtube/sign_packages.sh
-
-    - name: Download Twitter
-      run: |
-        cd twitter
-        python twitter_download.py
-
-    - name: Compile Twitter
-      run: |
-        cd twitter
-        chmod +x compile_twitter.sh
-        ./compile_twitter.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-    - name: Sign Twitter
-      run: |
-        chmod +x youtube/sign_packages.sh
-        ./youtube/sign_packages.sh
-
-    - name: Download YouTube
-      run: |
-        cd youtube
-        chmod +x youtube_download.sh
-        ./youtube_download.sh
-
-    - name: Compile YouTube
-      run: |
-        cd youtube
-        chmod +x compile_youtube.sh
-        ./compile_youtube.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-    - name: Sign YouTube
-      run: |
-        chmod +x youtube/sign_packages.sh
-        ./youtube/sign_packages.sh
-        
-    - name: Download YouTube Music v7a
-      run: |
-        cd yt-music-v7a
-        chmod +x download_music.sh
-        ./download_music.sh
-        
-    - name: Compile YouTube Music v7a
-      run: |
-        cd yt-music-v7a
-        chmod +x compile.sh
-        ./compile.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-    - name: Sign YouTube Music v7a
-      run: |
-        chmod +x youtube/sign_packages.sh
-        ./youtube/sign_packages.sh
-
-    - name: Download YouTube Music 64-v8a
-      run: |
-        cd yt-music-64-v8a
-        chmod +x download_music.sh
-        ./download_music.sh
-        
-    - name: Compile YouTube Music 64-v8a
-      run: |
-        cd yt-music-64-v8a
-        chmod +x compile.sh
-        ./compile.sh
-        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-
-    - name: Sign YouTube Music 64-v8a
-      run: |
-        chmod +x youtube/sign_packages.sh
-        ./youtube/sign_packages.sh
-        
     - name: Download TikTok
       run: |
         cd tiktok
-        chmod +x tiktok_download.sh
-        ./tiktok_download.sh
-        
+        python download.py
+
     - name: Compile TikTok
       run: |
-        cd tiktok
-        chmod +x compile_tiktok.sh
-        ./compile_tiktok.sh
+        cd reddit
+        chmod +x compile.sh
+        ./compile.sh
         echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: Sign TikTok
       run: |
-        chmod +x youtube/sign_packages.sh
-        ./youtube/sign_packages.sh
-        
+        chmod +x youtube/sign.sh
+        ./youtube/sign.sh
+
+    - name: Download Reddit
+      run: |
+        cd reddit
+        python download.py
+
+    - name: Compile Reddit
+      run: |
+        cd reddit
+        chmod +x compile.sh
+        ./compile.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign Reddit
+      run: |
+        chmod +x youtube/sign.sh
+        ./youtube/sign.sh
+
+    - name: Download Twitter
+      run: |
+        cd twitter
+        python download.py
+
+    - name: Compile Twitter
+      run: |
+        cd twitter
+        chmod +x compile.sh
+        ./compile.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign Twitter
+      run: |
+        chmod +x youtube/sign.sh
+        ./youtube/sign.sh
+
+    - name: Download YouTube
+      run: |
+        cd youtube
+        chmod +x download.sh
+        ./download.sh
+
+    - name: Compile YouTube
+      run: |
+        cd youtube
+        chmod +x compile.sh
+        ./compile.sh
+        echo "date_now=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Sign YouTube
+      run: |
+        chmod +x youtube/sign.sh
+        ./youtube/sign.sh
+
     - name: Upload packages
       uses: marvinpinto/action-automatic-releases@v1.2.1
       with:
@@ -134,8 +97,6 @@ jobs:
         files: |
           youtube/vanced-microg.apk
           youtube/output/release/*.apk
-          yt-music-v7a/output/release/yt-music-v7a-aligned-debugSigned.apk
-          yt-music-64-v8a/output/release/yt-music-64-v8a-aligned-debugSigned.apk
-          reddit/output/release/*.apk
           twitter/output/release/*.apk
-          tiktok/output/release/tiktok-aligned-debugSigned.apk
+          reddit/output/release/*.apk
+          tiktok/output/release/*.apk
