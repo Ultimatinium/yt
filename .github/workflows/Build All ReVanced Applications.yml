@@ -120,7 +120,7 @@ jobs:
       uses: marvinpinto/action-automatic-releases@v1.2.1
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "stable"
+        automatic_release_tag: "beta"
         draft: true
         title: "${{ env.date_now }} - ReVanced Latest"
         files: |
