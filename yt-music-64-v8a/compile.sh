@@ -37,7 +37,7 @@ if [[ "$1" == "clean" ]]; then
     exit
 fi
 
-echo "Ignore Compatibility"
+echo "Option to Ignore Compatibility"
 if [[ "$1" == "experimental" ]]; then
     EXPERIMENTAL="--experimental"
 fi
@@ -64,8 +64,9 @@ if [ -f "com.google.android.apps.youtube.music.apk" ]
 then
     echo "Compiling package"
     java -jar revanced-cli.jar -b revanced-patches.jar \
-                               ${patches[@]} \
-                               -a com.google.android.apps.youtube.music.apk -o output/yt-music-64-v8a.apk
+        ${patches[@]} \
+        $EXPERIMENTAL \
+        -a com.google.android.apps.youtube.music.apk -o build/yt-music-64-v8a.apk
 else
     echo "Cannot find YouTube Music arm64-v8a base package, skip compiling"
 fi
