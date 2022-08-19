@@ -42,4 +42,4 @@ jobs:
         draft: true
         title: "${{ env.date_now }} - ReVanced Latest"
         files: |
-          yt.music.v7a/*.apk
+          yt.music.v7a/output/release/*.apk
