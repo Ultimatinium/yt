@@ -1,6 +1,6 @@
 #!/bin/bash
 
-patch_file=./yt.music.patch.txt
+patches_file=./yt.music.patch.txt
 
 included_start="$(grep -n -m1 'INCLUDED PATCHES' "$patches_file" | cut -d':' -f1)"
 excluded_start="$(grep -n -m1 'EXCLUDED PATCHES' "$patches_file" | cut -d':' -f1)"
