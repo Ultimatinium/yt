@@ -80,6 +80,9 @@ YouTube
 </details>
 
 #### Credits
+
+<details>
+
 - [ReVanced](https://github.com/revanced) for all the patch.
 
 - Credits for the [revanced-build-template](https://github.com/n0k0m3/revanced-build-template) by [n0k0m3](https://github.com/n0k0m3).
@@ -89,6 +92,7 @@ YouTube
 - Thanks to [j-hc](https://github.com/j-hc) for the APK Mirror script from this repository [revanced-magisk-mudule](https://github.com/j-hc/revanced-magisk-module).
 
 - Thanks to me ([Stonks](https://phcorner.net/members/stonks.1530736) from [PH Corner](https://phcorner.net)) for this effortless repository.
+</details>
 
 #### Where to download?
 
