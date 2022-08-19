@@ -9,6 +9,7 @@ This repository will allow you to download the latest ReVanced Applications in t
 #### ReVanced Applications
 
 <details>
+
 - YouTube
 - YouTube Music arm64-v8a
 - YouTube Music arm-v7a
@@ -57,6 +58,7 @@ GitHub Downloads
 #### Patch Info
 
 <details>
+
 Twitter
 - `Removed Twitter ads..`
 
