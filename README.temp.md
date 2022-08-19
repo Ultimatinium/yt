@@ -1,9 +1,14 @@
-## Read Carefully..!
+# Read Carefully..!
 
-## ReVanced Download
-This repository will allow you to download the latest [ReVanced Applications](https://github.com/Ultimatinium/yt/blob/main/Versions/versions.md) in the releases section. This will help people who don't want to setup build environments on their machines.
+#### ReVanced
 
-### ReVanced Applications
+<details>
+This repository will allow you to download the latest ReVanced Applications in the releases section. This will help people who don't want to setup build environments on their machines.
+</details>
+
+#### ReVanced Applications
+
+<details>
 - YouTube
 - YouTube Music arm64-v8a
 - YouTube Music arm-v7a
@@ -11,8 +16,11 @@ This repository will allow you to download the latest [ReVanced Applications](ht
 - Reddit
 - Twitter
 - Micro G
+</details>
 
-### Stats
+#### Stats
+
+<details>
 Build ReVanved 
 
 [![](https://github.com/Ultimatinium/yt/actions/workflows/Build%20All%20ReVanced%20Applications.yml/badge.svg)](https://github.com/Ultimatinium/Build%20All%20ReVanced%20Applications/actions/workflows/Build%20All%20ReVanced%20Applications.yml)
@@ -23,17 +31,48 @@ GitHub Downloads
 <img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Stable%20Version%20Downloads&color=%6BDDD5"></a>
   <a href="https://github.com/Ultimatinium/yt-experimental/release">
 <img src="https://img.shields.io/github/downloads/Ultimatinium/yt-experimental/total?label=Beta/Experimental%20Version%20Downloads&color=%6BDDD5"></a>
+</details>
 
-### Notes
+#### Notes
+
+<details>
 - There are no `root` variant here, all the releases are `nonroot` variants.
-
 - All the patches here are the default and [Official Patches](https://github.com/revanced/revanced-patches) by [ReVanced](https://github.com/revanced).
+- All the app here are latest compatible versions from [APK Mirror](https://www.apkmirror.com) and [UpToDown](https://en.uptodown.com) website so there is no guarantee that the applications here are the latest update like on Google Play Store.
+- This is includes beta versions (latest versions) that isn't yet tested by the [ReVanced Team](https://github.com/revanced).
+</details>
 
-- See the included patches information [here](https://github.com/Ultimatinium/yt/blob/main/Patch%20Information/patch%20info.md).
+#### List of applications sources.
 
-- All the app here are latest compatible versions from [APK Mirror](https://www.apkmirror.com) and [UpToDown](https://en.uptodown.com) website (see the latest compatible versions [here](https://github.com/Ultimatinium/yt/blob/main/Versions/versions.md)) so there is no guarantee that the applications here are the latest update like on Google Play Store.
+<details>
+- [YouTube Music APK Mirror](https://www.apkmirror.com/apk/google-inc/youtube-music)
+- [YouTube APK Mirror](https://www.apkmirror.com/apk/google-inc/youtube)
+- [Reddit UpToDown](https://reddit-official-app.en.uptodown.com)
+- [Twitter UpToDown](https://twitter.en.uptodown.com)
+- [TikTok UpToDown](https://tiktok.en.uptodown.com)
+</details>
 
-### Credits
+#### Patch Info
+
+<details>
+Twitter
+- `Removed Twitter ads..`
+
+TikTok
+- `Removed TikTok ads.`
+
+Reddit
+- `Removed Reddit ads.`
+
+YouTube Music arm-v7a/arm64-v8a
+- [YouTube Music arm-v7a patches](https://github.com/Ultimatinium/yt/blob/main/yt-music-v7a/yt.music.patch.txt).
+- [YouTube Music arm64-v8a patches](https://github.com/Ultimatinium/yt/blob/main/yt-music-64-v8a/yt.music.patch.txt).
+
+YouTube
+- [YouTube patches](https://github.com/Ultimatinium/yt/blob/main/youtube/patches.txt).
+</details>
+
+#### Credits
 - [ReVanced](https://github.com/revanced) for all the patch.
 
 - Credits for the [revanced-build-template](https://github.com/n0k0m3/revanced-build-template) by [n0k0m3](https://github.com/n0k0m3).
@@ -44,8 +83,9 @@ GitHub Downloads
 
 - Thanks to me ([Stonks](https://phcorner.net/members/stonks.1530736) from [PH Corner](https://phcorner.net)) for this effortless repository.
 
-### Where to download?
+#### Where to download?
 
+<details>
 - First, click [here](https://github.com/Ultimatinium/yt/releases).
 
 - Click the `Assets` button.
@@ -53,11 +93,12 @@ GitHub Downloads
 - Click on the file to download.
 
 - I will try to update everyday, so stay tuned.
+</details>
 
-### Beta Version
-- For the Beta/Experimental YouTube and YouTube Music, click [here](https://github.com/Ultimatinium/yt-experimental).
+#### You want to create your own?
 
-### You want to create your own?
+<details>
 - Create your own releases by simple steps, click [here](https://bit.ly/3dhiACW) to do it.
+</details>
 
-### Star this repository if you liked it.
+#### Star this repository if you liked it.
