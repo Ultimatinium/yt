@@ -36,6 +36,7 @@ GitHub Downloads
 #### Notes
 
 <details>
+
 - There are no `root` variant here, all the releases are `nonroot` variants.
 - All the patches here are the default and [Official Patches](https://github.com/revanced/revanced-patches) by [ReVanced](https://github.com/revanced).
 - All the app here are latest compatible versions from [APK Mirror](https://www.apkmirror.com) and [UpToDown](https://en.uptodown.com) website so there is no guarantee that the applications here are the latest update like on Google Play Store.
@@ -45,6 +46,7 @@ GitHub Downloads
 #### List of applications sources.
 
 <details>
+
 - [YouTube Music APK Mirror](https://www.apkmirror.com/apk/google-inc/youtube-music)
 - [YouTube APK Mirror](https://www.apkmirror.com/apk/google-inc/youtube)
 - [Reddit UpToDown](https://reddit-official-app.en.uptodown.com)
@@ -86,6 +88,7 @@ YouTube
 #### Where to download?
 
 <details>
+
 - First, click [here](https://github.com/Ultimatinium/yt/releases).
 
 - Click the `Assets` button.
@@ -98,6 +101,7 @@ YouTube
 #### You want to create your own?
 
 <details>
+
 - Create your own releases by simple steps, click [here](https://bit.ly/3dhiACW) to do it.
 </details>
 
