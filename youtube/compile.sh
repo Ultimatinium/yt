@@ -78,15 +78,4 @@ else
     echo "Cannot find YouTube base package, skip compiling"
 fi
 
-echo "Compiling YouTube Music arm64-v8a"
-if [ -f "com.google.android.apps.youtube.music.apk" ]
-then
-    echo "Compiling package"
-    java -jar revanced-cli.jar -b revanced-patches.jar \
-                               ${patches[@]} \
-                               -a com.google.android.apps.youtube.music.apk -o output/yt-music-64-v8a.apk
-else
-    echo "Cannot find YouTube Music base package, skip compiling"
-fi
-
 echo "Done compiling"
