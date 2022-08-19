@@ -10,4 +10,4 @@ def download_apk(url, filename):
     subprocess.run(["wget", dl_url, "-O", filename])
 
 print("Downloading YouTube Music arm-v7a")
-download_apk(YT_MUSIC_URL, "com.google.android.apps.youtube.music.apk)
+download_apk(YT_MUSIC_URL, "com.google.android.apps.youtube.music.apk")
