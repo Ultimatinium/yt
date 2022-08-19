@@ -2,7 +2,7 @@
 
 YouTube Music
 - APK Mirror arm64-v8a : [5.17.51](https://www.apkmirror.com/apk/google-inc/youtube-music)
-- UpToDown arm-v7a : [5.17.51](https://youtube-music.en.uptodown.com)
+- APK Mirror arm-v7a : [5.17.51](https://www.apkmirror.com/apk/google-inc/youtube-music)
 
 YouTube
 - APK Mirror : [17.32.35](https://www.apkmirror.com/apk/google-inc/youtube)
