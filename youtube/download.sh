@@ -4,11 +4,8 @@ echo "Declaring variables"
 declare -A apks
 
 apks["com.google.android.youtube.apk"]=dl_youtube
-apks["com.google.android.apps.youtube.music.apk"]=dl_youtube-music
 
 WGET_HEADER="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
-ARM_V7A="arm-v7a"
-ARM64_V8A="arm64-v8a"
 
 req()
 { wget -nv -O "$2" --header="$WGET_HEADER" "$1"; }
@@ -60,39 +57,12 @@ dl_youtube()
     fi
 }
 
-dl_youtube-music()
-{
-    local arch=$ARM64_V8A
-    echo "Downloading YouTube Music (${arch})"
-    local last_ver
-    last_ver="$version"
-    last_ver="${last_ver:-$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube-music" | get_largest_ver)}"
-
-    echo "Selected version: ${last_ver}"
-    local base_apk="com.google.android.apps.youtube.music.apk"
-    if [ ! -f "$base_apk" ]
-    then
-        if [ "$arch" = "$ARM_V7A" ]
-	then
-            local regexp_arch='armeabi-v7a</div>[^@]*@\([^"]*\)'
-	elif [ "$arch" = "$ARM64_V8A" ]
-	then
-            local regexp_arch='arm64-v8a</div>[^@]*@\([^"]*\)'
-        fi
-        declare -r dl_url=$(dl_apk "https://www.apkmirror.com/apk/google-inc/youtube-music/youtube-music-${last_ver//./-}-release/" \
-                "$regexp_arch" \
-                "$base_apk")
-        echo "YouTube Music (${arch}) v${last_ver}"
-        echo "Downloaded from: [YouTube Music (${arch}) - APKMirror]($dl_url)"
-    fi
-}
-
 for apk in "${!apks[@]}"
 do
     if [ ! -f $apk ]
     then
         echo "Downloading $apk"
-        version=$(jq -r ".\"$apk\"" <youtube_versions.json)
+        version=$(jq -r ".\"$apk\"" <version.json)
         ${apks[$apk]}
     fi
 done
