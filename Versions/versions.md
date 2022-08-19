@@ -8,10 +8,10 @@ YouTube
 - APK Mirror : [17.32.35](https://www.apkmirror.com/apk/google-inc/youtube)
 
 Reddit
-- UpToDown : [2022.31.0](https://reddit-official-app.en.uptodown.com)
+- UpToDown : [Latest](https://reddit-official-app.en.uptodown.com)
 
 Twitter
-- UpToDown : [9.55.0-Release.0](https://twitter.en.uptodown.com)
+- UpToDown : [Latest](https://twitter.en.uptodown.com)
 
 TikTok
-- UpToDown : [25.8.2](https://tiktok.en.uptodown.com)
+- UpToDown : [Latest](https://tiktok.en.uptodown.com)
