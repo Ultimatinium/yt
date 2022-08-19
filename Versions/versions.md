@@ -14,4 +14,4 @@ Twitter
 - UpToDown : [9.55.0-Release.0](https://twitter.en.uptodown.com)
 
 TikTok
-- UpToDown : [25.7.5](https://tiktok.en.uptodown.com)
+- UpToDown : [25.8.2](https://tiktok.en.uptodown.com)
