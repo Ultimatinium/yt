@@ -62,7 +62,7 @@ GitHub Downloads
 <details>
 
 Twitter
-- `Removed Twitter ads..`
+- `Removed Twitter ads.`
 
 TikTok
 - `Removed TikTok ads.`
