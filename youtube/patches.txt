@@ -11,15 +11,7 @@ remember-video-quality
 video-ads
 general-ads
 amoled
-minimized-playback-music
-hide-get-premium
-upgrade-button-remover
-background-play
-music-microg-support
-music-video-ads
-codecs-unlock
-exclusive-audio-playback
-compact-header
+tablet-mini-player
 # EXCLUDED PATCHES
 swipe-controls
 disable-create-button
@@ -36,4 +28,3 @@ custom-playback-speed
 hdr-auto-brightness
 hide-infocard-suggestions
 premium-heading
-tasteBuilder-remover
