@@ -51,6 +51,7 @@ GitHub Downloads
 <details>
 
 - [YouTube Music APK Mirror](https://www.apkmirror.com/apk/google-inc/youtube-music)
+- [YouTube Music UpToDown](https://youtube-music.en.uptodown.com/android)
 - [YouTube APK Mirror](https://www.apkmirror.com/apk/google-inc/youtube)
 - [Reddit UpToDown](https://reddit-official-app.en.uptodown.com)
 - [Twitter UpToDown](https://twitter.en.uptodown.com)
