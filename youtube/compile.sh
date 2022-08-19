@@ -58,7 +58,7 @@ if [ ! -f "vanced-microg.apk" ]
 then
     echo "Downloading Vanced microG"
     ./apkeep -a com.mgoogle.android.gms@${VMG_VERSION} .
-    mv com.mgoogle.android.gms@${VMG_VERSION}.apk vanced-microg.apk
+    mv com.mgoogle.android.gms@${VMG_VERSION}.apk micro.g.apk
 fi
 
 [[ ! -z "$included_patches" ]] && populate_patches "-i" "$included_patches"
