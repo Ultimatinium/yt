@@ -127,11 +127,11 @@ jobs:
       uses: marvinpinto/action-automatic-releases@v1.2.1
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "Latest"
+        automatic_release_tag: "stable"
         draft: true
         title: "${{ env.date_now }} - ReVanced Latest"
         files: |
-          youtube/vanced-microg.apk
+          youtube/micro.g.apk
           youtube/output/release/*.apk
           twitter/output/release/*.apk
           reddit/output/release/*.apk
