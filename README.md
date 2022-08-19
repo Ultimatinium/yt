@@ -3,6 +3,7 @@
 #### ReVanced
 
 <details>
+
 This repository will allow you to download the latest ReVanced Applications in the releases section. This will help people who don't want to setup build environments on their machines.
 </details>
 
@@ -22,6 +23,7 @@ This repository will allow you to download the latest ReVanced Applications in t
 #### Stats
 
 <details>
+
 Build ReVanved 
 
 [![](https://github.com/Ultimatinium/yt/actions/workflows/Build%20All%20ReVanced%20Applications.yml/badge.svg)](https://github.com/Ultimatinium/Build%20All%20ReVanced%20Applications/actions/workflows/Build%20All%20ReVanced%20Applications.yml)
