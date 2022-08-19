@@ -1,15 +1,14 @@
 #!/bin/bash
 
-patch_file=./yt.music.patch.txt
+patches_file=./yt.music.patch.txt
 
-excluded_start="$(grep -n -m1 'EXCLUDE PATCHES' "$patch_file" | cut -d':' -f1)"
-included_start="$(grep -n -m1 'INCLUDE PATCHES' "$patch_file" | cut -d':' -f1)"
+included_start="$(grep -n -m1 'INCLUDED PATCHES' "$patches_file" | cut -d':' -f1)"
+excluded_start="$(grep -n -m1 'EXCLUDED PATCHES' "$patches_file" | cut -d':' -f1)"
 
-excluded_patches="$(tail -n +$excluded_start $patch_file | head -n "$(( included_start - excluded_start ))" | grep '^[^#[:blank:]]')"
-included_patches="$(tail -n +$included_start $patch_file | grep '^[^#[:blank:]]')"
+included_patches="$(tail -n +$included_start $patches_file | head -n "$(( excluded_start - included_start ))" | grep '^[^#[:blank:]]')"
+excluded_patches="$(tail -n +$excluded_start $patches_file | grep '^[^#[:blank:]]')"
 
 declare -a patches
-
 declare -A artifacts
 
 artifacts["revanced-cli.jar"]="revanced/revanced-cli revanced-cli .jar"
@@ -33,8 +32,7 @@ populate_patches()
 }
 
 echo "Cleaning up"
-if [[ "$1" == "clean" ]]
-    then
+if [[ "$1" == "clean" ]]; then
     rm -f revanced-cli.jar revanced-integrations.apk revanced-patches.jar
     exit
 fi
@@ -49,7 +47,7 @@ do
     fi
 done
 
-echo "Populate Patches"
+echo "Call Populate Patches"
 [[ ! -z "$excluded_patches" ]] && populate_patches "-e" "$excluded_patches"
 [[ ! -z "$included_patches" ]] && populate_patches "-i" "$included_patches"
 
