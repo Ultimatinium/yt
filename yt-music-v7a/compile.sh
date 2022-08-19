@@ -37,6 +37,10 @@ if [[ "$1" == "clean" ]]; then
     exit
 fi
 
+if [[ "$1" == "experimental" ]]; then
+    EXPERIMENTAL="--experimental"
+fi
+
 echo "Fetching dependencies"
 for artifact in "${!artifacts[@]}"
 do
@@ -59,8 +63,9 @@ if [ -f "com.google.android.apps.youtube.music.apk" ]
 then
     echo "Compiling package"
     java -jar revanced-cli.jar -b revanced-patches.jar \
-                               ${patches[@]} \
-                               -a com.google.android.apps.youtube.music.apk -o output/yt-music-v7a.apk
+        ${patches[@]} \
+        $EXPERIMENTAL \
+        -a com.google.android.apps.youtube.music.apk -o build/yt-music-v7a.apk
 else
     echo "Cannot find YouTube Music arm-v7a base package, skip compiling"
 fi
