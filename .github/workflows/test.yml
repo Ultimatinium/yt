@@ -44,4 +44,4 @@ jobs:
         draft: true
         title: "Test"
         files: |
-          yt-music-64-v8a/*.apk
+          yt-music-64-v8a/output/release/*.apk
