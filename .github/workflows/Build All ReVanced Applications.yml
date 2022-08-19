@@ -39,7 +39,8 @@ jobs:
     - name: Download YouTube Music arm-v7a
       run: |
         cd yt-music-v7a
-        python download.py
+        chmod +x download.sh
+        ./download.sh
 
     - name: Compile YouTube Music arm-v7a
       run: |
