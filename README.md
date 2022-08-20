@@ -72,8 +72,8 @@ Reddit
 - `Removed Reddit ads.`
 
 YouTube Music arm-v7a/arm64-v8a
-- [YouTube Music arm-v7a patches](https://github.com/Ultimatinium/yt/blob/main/yt-music-v7a/yt.music.patch.txt).
-- [YouTube Music arm64-v8a patches](https://github.com/Ultimatinium/yt/blob/main/yt-music-64-v8a/yt.music.patch.txt).
+- [YouTube Music arm-v7a patches](https://github.com/Ultimatinium/yt/blob/main/yt.music.v7a/yt.music.patch.txt).
+- [YouTube Music arm64-v8a patches](https://github.com/Ultimatinium/yt/blob/main/yt.music.64.v8a/yt.music.patch.txt).
 
 YouTube
 - [YouTube patches](https://github.com/Ultimatinium/yt/blob/main/youtube/patches.txt).
