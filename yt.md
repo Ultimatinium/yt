@@ -1,4 +1,5 @@
 # Read Carefully..!
+- Click `Details` to expand.
 
 #### ReVanced
 
