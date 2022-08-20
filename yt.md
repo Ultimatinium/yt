@@ -41,6 +41,7 @@ GitHub Downloads
 
 <details>
 
+- Buggy on Android 11 where all the applications are forcing to close.
 - There are no `root` variant here, all the releases are `nonroot` variants.
 - All the patches here are the default and [Official Patches](https://github.com/revanced/revanced-patches) by [ReVanced](https://github.com/revanced).
 - All the app here are latest compatible versions from [APK Mirror](https://www.apkmirror.com) and [UpToDown](https://en.uptodown.com) website so there is no guarantee that the applications here are the latest update like on Google Play Store.
