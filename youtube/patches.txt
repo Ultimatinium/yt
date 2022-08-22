@@ -12,6 +12,7 @@ video-ads
 general-ads
 amoled
 tablet-mini-player
+downloads
 # EXCLUDED PATCHES
 swipe-controls
 disable-create-button
