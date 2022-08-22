@@ -25,7 +25,7 @@
 
 <details>
 
-- Build ReVanved
+- Build ReVanced
 
 [![](https://github.com/Ultimatinium/yt/actions/workflows/Build%20All%20ReVanced%20Applications.yml/badge.svg)](https://github.com/Ultimatinium/Build%20All%20ReVanced%20Applications/actions/workflows/Build%20All%20ReVanced%20Applications.yml)
 
