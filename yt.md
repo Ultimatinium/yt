@@ -25,16 +25,19 @@ This repository will allow you to download the latest ReVanced Applications in t
 
 <details>
 
-Build ReVanved 
+- Build ReVanved
 
 [![](https://github.com/Ultimatinium/yt/actions/workflows/Build%20All%20ReVanced%20Applications.yml/badge.svg)](https://github.com/Ultimatinium/Build%20All%20ReVanced%20Applications/actions/workflows/Build%20All%20ReVanced%20Applications.yml)
 
-GitHub Downloads
 
-  <a href="https://github.com/Ultimatinium/yt/release">
-<img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Stable%20Version%20Downloads&color=%6BDDD5"></a>
-  <a href="https://github.com/Ultimatinium/yt-experimental/release">
-<img src="https://img.shields.io/github/downloads/Ultimatinium/yt-experimental/total?label=Beta/Experimental%20Version%20Downloads&color=%6BDDD5"></a>
+- GitHub Downloads
+
+<a href="https://github.com/Ultimatinium/yt/release"><img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Total%20Downloads&color=%6BDDD5"></a>
+
+
+- GitHub Page
+
+![](https://img.shields.io/uptimerobot/status/m792515188-6f60f824dfc5a3802a442a56?style=flat)
 </details>
 
 #### Notes
