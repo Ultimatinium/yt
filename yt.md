@@ -5,7 +5,7 @@
 
 <details>
 
-This repository will allow you to download the latest ReVanced Applications in the releases section. This will help people who don't want to setup build environments on their machines.
+- This repository will allow you to download the latest ReVanced Applications in the releases section. This will help people who don't want to setup build environments on their machines.
 </details>
 
 #### ReVanced Applications
