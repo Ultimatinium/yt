@@ -32,7 +32,7 @@ This repository will allow you to download the latest ReVanced Applications in t
 
 - GitHub Downloads
 
-<a href="https://github.com/Ultimatinium/yt/release"><img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Total%20Downloads&color=%6BDDD5"></a>
+<a href="https://github.com/Ultimatinium/yt/release"><img src="https://img.shields.io/github/downloads/Ultimatinium/yt/total?label=Latest%20Release%20Total%20Downloads&color=%6BDDD5"></a>
 
 
 - GitHub Page
