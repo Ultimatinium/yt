@@ -82,6 +82,8 @@ YouTube Music arm-v7a/arm64-v8a
 
 YouTube
 - [YouTube patches](https://github.com/Ultimatinium/yt/blob/main/youtube/patches.txt).
+
+( See the full ReVanced patch [**here**](https://github.com/revanced/revanced-patches). )
 </details>
 
 #### Credits
